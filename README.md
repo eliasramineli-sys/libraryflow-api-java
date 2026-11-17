@@ -1,4 +1,4 @@
-# LibraryFlow API — Gerenciamento de Biblioteca (Projeto 7/9)
+# LibraryFlow API — Gerenciamento de Biblioteca
 
 API REST educacional para **livros, leitores, empréstimos, devoluções e disponibilidade de exemplares**.
 
@@ -62,6 +62,3 @@ Empréstimos e devoluções usam `@Transactional`: operações em banco confirma
 
 ## Limitações
 **Sem autenticação nem autorização:** não publique com dados pessoais reais. Não implementa reservas, multas, notificações, renovação, buscas paginadas nem identificação individual de cada exemplar. O pipeline CI executa testes unitários; não substitui testes de integração com PostgreSQL, especialmente os de concorrência.
-
-## Para entrevistas
-Explique POO, `@Version`, concorrência otimista, `@Transactional`, relações `@ManyToOne`, migrações Flyway, Bean Validation, regras de estoque e controle de empréstimos.

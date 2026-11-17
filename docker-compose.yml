@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: libraryflow
+      POSTGRES_USER: libraryflow
+      POSTGRES_PASSWORD: libraryflow
+    ports:
+      - "5438:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U libraryflow -d libraryflow"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - libraryflow_data:/var/lib/postgresql/data
+volumes:
+  libraryflow_data:
